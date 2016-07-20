@@ -1,0 +1,76 @@
+body {
+    padding: 0;
+    padding-top: 50px;
+    font-size: 150%;
+    margin: 0;
+}
+
+/* Navbar padding */
+.navbar-default .navbar-nav > li {
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+}
+
+.navbar-default .navbar-nav {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+    /* Navbar link color */
+    .navbar-default .navbar-nav > li > a {
+        color: #eee;
+    }
+
+        /* Navbar hover link bg-color */
+        .navbar-default .navbar-nav > li > a:hover {
+            background-color: #666;
+            color: #ffffff;
+        }
+
+/* Navbar center brand */
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.navbar-toggle {
+    z-index: 3;
+}
+
+/* Navbar social btn row */
+#social-list li, #social-list a, #social-list i {
+    float: right;
+    padding: 6px;
+    display: inline;
+}
+
+/* Sections */
+/* banner */
+#banner {
+  background: url("../images/header-img.jpg") no-repeat top center fixed;
+  background-size: cover;
+  height: 600px;
+}
+
+/* about */
+#about {
+    background-color: #EEE;
+    height:300px;
+}
+#photo {
+    width: 25em;
+    padding: 2em;
+} 
+.description {
+    padding: 4em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* portfolio */
+#portfolio {
+    height: 600px;
+}
