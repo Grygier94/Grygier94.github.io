@@ -52,25 +52,39 @@ body {
 #banner {
   background: url("../images/header-img.jpg") no-repeat top center fixed;
   background-size: cover;
-  height: 600px;
+  height: 550px;
 }
 
 /* about */
 #about {
     background-color: #EEE;
-    height:300px;
+    padding-top: 1vw;
+    padding-bottom: 4vw;
 }
-#photo {
-    width: 25em;
-    padding: 2em;
+#photo {  
+    width: 15em;
+    margin-top: 5vw;
 } 
 .description {
-    padding: 4em;
-    font-size: 1.5em;
+    margin-top: 8vw;
+    font-size: calc(1em + 0.5vw);
     text-align: center;
+    vertical-align: middle;
 }
 
 /* portfolio */
 #portfolio {
-    height: 600px;
+    
+}
+.apps {
+    padding-top: 1vw;
+    padding-bottom: 2vw;
+}
+.web-games {
+    background-color: #EEE;
+}
+
+/* contact */
+#contact {
+    background-color: #EEE;
 }
