@@ -93,15 +93,54 @@ h1 {
     padding-top: 2vw;
     padding-bottom: 2vw;
 }
+
 #map {
     width: 100%;
     height: 500px;
 }
-.contact-info{
-   padding-top: 2vw;
-   
+
+.contact-info {
+    padding-top: 2vw;
 }
 
 .btn-contact {
+    margin: 1em;
     font-size: calc(1em + 1vw);
+}
+
+/* footer */
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    border-color: #080808;
+}
+
+    footer ul {
+        list-style: none;
+    }
+
+        footer ul li {
+            display: inline-block;
+        }
+
+            footer ul li:hover {
+                background-color: #777;
+            }
+
+            footer ul li a {
+                color: #eee;
+                display: block;
+                font-size: calc(0.7em + 0.3vw);
+                padding: calc(0.4em + 0.8vw);
+            }
+
+                footer ul li a:hover {
+                    text-decoration: none;
+                    color: #eee;
+                }
+
+.copyright {
+    font-size: calc(0.7em + 0.3vw);
+    padding: calc(0.4em + 0.8vw);
 }
