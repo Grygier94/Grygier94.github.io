@@ -1,3 +1,8 @@
+$(document).ready(function () {
+    initMap();
+    detectBrowser();
+});
+
 var map;
 function initMap() {
     myLatLng = { lat: 50.085277, lng: 19.140868 };
@@ -5,8 +10,12 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: myLatLng,
         zoom: 10,
+        mapTypeControl: true,
+        disableDoubleClickZoom: true,
+        draggable: false,
+        fullscreenControl: false,
         scrollwheel: false,
-        fullscreenControl: true
+        streetViewControl: false
     });
 
     marker = new google.maps.Marker({
@@ -15,10 +24,6 @@ function initMap() {
         title: 'Bierun, Skalna 7'
     });
 }
-
-$(document).ready(function () {
-    initMap();
-});
 
 //function detectBrowser() {
 //    var useragent = navigator.userAgent;
