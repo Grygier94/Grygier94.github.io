@@ -110,20 +110,20 @@ h1 {
 
 /* footer */
 footer {
-    bottom: 0;
-    width: 100%;
     background-color: #222;
     border-color: #080808;
 }
 
     footer ul {
         list-style: none;
+        margin: 0;
     }
 
         footer ul li {
             display: inline-block;
         }
 
+            footer ul li:focus,
             footer ul li:hover {
                 background-color: #777;
             }
@@ -133,8 +133,10 @@ footer {
                 display: block;
                 font-size: calc(0.7em + 0.3vw);
                 padding: calc(0.4em + 0.8vw);
+                padding-bottom: 1vw;
             }
 
+                footer ul li a:focus,
                 footer ul li a:hover {
                     text-decoration: none;
                     color: #eee;
@@ -142,5 +144,11 @@ footer {
 
 .copyright {
     font-size: calc(0.7em + 0.3vw);
-    padding: calc(0.4em + 0.8vw);
+    padding: 1.2vw;
+}
+
+@media (max-width: 767px) {
+    .copyright {
+        margin-left: 38px;
+    }
 }

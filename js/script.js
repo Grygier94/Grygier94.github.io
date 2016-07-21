@@ -10,12 +10,12 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: myLatLng,
         zoom: 10,
-        mapTypeControl: true,
-        disableDoubleClickZoom: true,
+        mapTypeControl: false,
         draggable: false,
         fullscreenControl: false,
-        scrollwheel: false,
-        streetViewControl: false
+        streetViewControl: false,
+        disableDoubleClickZoom: true,
+        scrollwheel: false
     });
 
     marker = new google.maps.Marker({
