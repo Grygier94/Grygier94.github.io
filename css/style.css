@@ -99,4 +99,9 @@ h1 {
 }
 .contact-info{
    padding-top: 2vw;
+   
+}
+
+.btn-contact {
+    font-size: calc(1em + 1vw);
 }
