@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-    font-size: calc(1em + 2vw);
+    font-size: calc(2em + 1.3vw);
 }
 
 /* Navbar padding */
@@ -51,9 +51,36 @@ h1 {
     display: inline;
 }
 
+.showbox {
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+
+    .showbox.facebook:hover {
+        background-color: #3B5998 !important;
+    }
+
+    .showbox.twitter:hover {
+        background-color: #55acee !important;
+    }
+
+    /*.showbox.github:hover {
+  background-color: #333333 !important;
+}*/
+
+    .showbox.google:hover {
+        background-color: #dd4b39 !important;
+    }
+
+    .showbox.linkedin:hover {
+        background-color: #0077B5 !important;
+    }
+
 /* Sections */
-/* banner */
-#banner {
+/* home */
+#home {
     background: url("../images/header-img.jpg") no-repeat top center fixed;
     background-size: cover;
     height: 550px;
@@ -79,9 +106,6 @@ h1 {
 }
 
 /* portfolio */
-#portfolio {
-}
-
 .apps {
     padding-top: 1vw;
     padding-bottom: 2vw;
@@ -123,7 +147,7 @@ footer {
             display: inline-block;
         }
 
-            footer ul li:focus,
+            /*footer ul li:focus,*/
             footer ul li:hover {
                 background-color: #777;
             }
@@ -147,8 +171,98 @@ footer {
     padding: 1.2vw;
 }
 
+.disable-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
 @media (max-width: 767px) {
     .copyright {
         margin-left: 38px;
     }
 }
+
+
+
+/* HOVER OVER THUMBNAILS ANIMATION */
+.view {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+    .view img {
+        transition: all 0.2s linear;
+    }
+
+    .view .mask {
+        opacity: 0;
+        /*background-color: rgba(219,127,8, 0.7);*/
+        background-color: rgba(255,255,255, 0.4);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .view .mask, .view .content {
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+    }
+
+    .view h2 {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        font-size: calc(0.5em + 0.5vw);
+        padding: calc(0.3em + 0.4vw);
+        background: rgba(0, 0, 0, 0.8);
+        margin: 0;
+        width: 100%;
+    }
+
+        .view h2.topHeader {
+            top: 0;
+            transform: translateY(-100px);
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .view h2.bottomHeader {
+            bottom: 0;
+            transform: translateY(+100px);
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+        }
+
+    .view:hover img {
+        transform: scale(0.98);
+    }
+
+    .view:hover .mask {
+        opacity: 1;
+    }
+
+    .view:hover h2 {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+        .view:hover h2.topHeader {
+            position: absolute;
+            width: 100%;
+            top: 0;
+        }
+
+        .view:hover h2.bottomHeader {
+            color: grey;
+            font-weight: bold;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+/* HOVER OVER THUMBNAILS ANIMATION END */

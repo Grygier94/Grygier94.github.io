@@ -21,7 +21,7 @@
     <![endif]-->
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse  navbar-inner">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse navbar-inner disable-select">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -31,31 +31,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Marcin Grygierczyk</a>
+                <a class="navbar-brand showbox" href="#">Marcin Grygierczyk</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#banner">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="nav navbar-nav navbar-right navScroll">
+                    <li class="active"><a class="showbox" href="#home">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a class="showbox" href="#about">About</a></li>
+                    <li><a class="showbox" href="#portfolio">Portfolio</a></li>
+                    <li><a class="showbox" href="#contact">Contact</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav" id="social-list">
-                    <li><a href="https://pl.linkedin.com/in/marcin-grygierczyk-073240114" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-                    <li><a href="https://github.com/Grygier94" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a></li>
-                    <li><a href="https://plus.google.com/u/0/110764150012596440426" target="_blank"><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a></li>
-                    <li><a href="https://twitter.com/Cinek64" target="_blank"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-                    <li><a href="https://web.facebook.com/marcin.grygierczyk.77" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+                    <li><a class="showbox linkedin size" href="https://pl.linkedin.com/in/marcin-grygierczyk-073240114" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+                    <li><a class="showbox github size" href="https://github.com/Grygier94" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a></li>
+                    <li><a class="showbox google size" href="https://plus.google.com/u/0/110764150012596440426" target="_blank"><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a></li>
+                    <li><a class="showbox twitter size" href="https://twitter.com/Cinek64" target="_blank"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+                    <li><a class="showbox facebook size" href="https://web.facebook.com/marcin.grygierczyk.77" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
     <!-- Top Banner -->
-    <section id="banner">
+    <section id="home">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -90,20 +90,47 @@
                     </div>
 
                     <div class="col-sm-6 col-md-4">
-                        <a href="#" target="_blank" class="thumbnail">
-                            <img src="images/WebFirstApp.jpg" alt="Coming Soon">
-                        </a>
+                        <div class="view">
+                            <a href="#" target="_blank" class="thumbnail">
+                                <img src="images/WebFirstApp.jpg" alt="Coming Soon">
+
+                                <div class="mask">
+                                    <h2 class="topHeader">Coming Soon</h2>
+
+                                    <h2 class="bottomHeader">Coming Soon</h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
                     <div class="col-sm-6 col-md-4">
-                        <a href="#" target="_blank" class="thumbnail">
-                            <img src="images/WebSecondApp.jpg" alt="BORS-PL">
-                        </a>
+                        <div class="view">
+                            <a href="#" target="_blank" class="thumbnail">
+                                <img src="images/WebSecondApp.jpg" alt="BORS-PL">
+
+                                <div class="mask">
+                                    <h2 class="topHeader">Coming Soon</h2>
+
+                                    <h2 class="bottomHeader">Coming Soon</h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
                     <div class="col-xs-push-0 col-sm-push-3 col-md-push-0 col-sm-6 col-md-4">
-                        <a href="#" target="_blank" class="thumbnail">
-                            <img src="images/WebThirdApp.jpg" alt="Shumii">
-                        </a>
+                        <div class="view">
+                            <a href="#" target="_blank" class="thumbnail">
+                                <img src="images/WebThirdApp.jpg" alt="Shumii">
+
+                                <div class="mask">
+                                    <h2 class="topHeader">Coming Soon</h2>
+
+                                    <h2 class="bottomHeader">Coming Soon</h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
             </div><!-- /.row -->
         </div><!-- /.web-apps -->
@@ -117,20 +144,47 @@
                     </div>
 
                     <div class="col-sm-6 col-md-4">
-                        <a href="http://www.kongregate.com/games/Grygier94/dont-let-break-your-heart" target="_blank" class="thumbnail">
-                            <img src="images/WebFirstGame.jpg" alt="Don't Let Break Your Heart'">
-                        </a>
+                        <div class="view">
+                            <a href="http://www.kongregate.com/games/Grygier94/dont-let-break-your-heart" target="_blank" class="thumbnail">
+                                <img src="images/WebFirstGame.jpg" alt="Don't Let Break Your Heart'">
+
+                                <div class="mask">
+                                    <h2 class="topHeader">Don't let break your heart</h2>
+
+                                    <h2 class="bottomHeader">Construct 2</h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
                     <div class="col-sm-6 col-md-4">
-                        <a href="http://www.kongregate.com/games/Grygier94/balloon-infinity-2" target="_blank" class="thumbnail">
-                            <img src="images/WebSecondGame.jpg" alt="Flappy Shumii">
-                        </a>
+                        <div class="view">
+                            <a href="http://www.kongregate.com/games/Grygier94/flappy-shumii" target="_blank" class="thumbnail">
+                                <img src="images/WebSecondGame.jpg" alt="Flappy Shumii">
+
+                                <div class="mask">
+                                    <h2 class="topHeader">Flappy Shumii</h2>
+
+                                    <h2 class="bottomHeader">Construct 2</h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
                     <div class="col-xs-push-0 col-sm-push-3 col-md-push-0 col-sm-6 col-md-4">
-                        <a href="http://www.kongregate.com/games/Grygier94/flappy-shumii" target="_blank" class="thumbnail">
-                            <img src="images/WebThirdGame.jpg" alt="Balloon Infinity 2">
-                        </a>
+                        <div class="view">
+                            <a href="http://www.kongregate.com/games/Grygier94/balloon-infinity-2" target="_blank" class="thumbnail">
+                                <img src="images/WebThirdGame.jpg" alt="Balloon Infinity 2">
+
+                                <div class="mask">
+                                    <h2 class="topHeader">Balloon Infinity 2</h2>
+
+                                    <h2 class="bottomHeader">Construct 2</h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
             </div><!-- /.row -->
         </div><!-- /.web-games -->
@@ -144,36 +198,89 @@
                     </div>
 
                     <div class="col-sm-6 col-md-4">
-                        <a href="#" class="thumbnail">
-                            <img src="images/MobileFirstGame.jpg" alt="Coming Soon">
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <a href="https://play.google.com/store/apps/details?id=marcin.grygierczyk.borspl" target="_blank" class="thumbnail">
-                            <img src="images/MobileSecondGame.jpg" alt="BORS-PL">
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <a href="https://play.google.com/store/apps/details?id=marcingrygierczyk.shumii" target="_blank" class="thumbnail">
-                            <img src="images/MobileThirdGame.jpg" alt="Shumii">
-                        </a>
+                        <div class="view">
+                            <a href="#" class="thumbnail">
+                                <img src="images/MobileFirstGame.jpg" alt="Coming Soon">
+
+                                <div class="mask">
+                                    <h2 class="topHeader">Coming Soon</h2>
+
+                                    <h2 class="bottomHeader">Construct 2</h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="col-sm-6 col-md-4">
-                        <a href="https://play.google.com/store/apps/details?id=marcingrygierczyk.junglebang" target="_blank" class="thumbnail">
-                            <img src="images/MobileFourthGame.jpg" alt="Jungle Bang">
-                        </a>
+                        <div class="view">
+                            <a href="https://play.google.com/store/apps/details?id=marcin.grygierczyk.borspl" target="_blank" class="thumbnail">
+                                <img src="images/MobileSecondGame.jpg" alt="BORS-PL">
+
+                                <div class="mask">
+                                    <h2 class="topHeader">BORS-PL</h2>
+
+                                    <h2 class="bottomHeader">Construct 2</h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
                     <div class="col-sm-6 col-md-4">
-                        <a href="https://play.google.com/store/apps/details?id=com.grygier.tsge" target="_blank" class="thumbnail">
-                            <img src="images/MobileFifthGame.jpg" alt="The Simplest Game Ever">
-                        </a>
+                        <div class="view">
+                            <a href="https://play.google.com/store/apps/details?id=marcingrygierczyk.shumii" target="_blank" class="thumbnail">
+                                <img src="images/MobileThirdGame.jpg" alt="Shumii">
+
+                                <div class="mask">
+                                    <h2 class="topHeader">Shumii</h2>
+
+                                    <h2 class="bottomHeader">Construct 2</h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
                     <div class="col-sm-6 col-md-4">
-                        <a href="https://play.google.com/store/apps/details?id=com.grygier.quickshot" target="_blank" class="thumbnail">
-                            <img src="images/MobileSixthGame.jpg" alt="Quick Shot">
-                        </a>
+                        <div class="view">
+                            <a href="https://play.google.com/store/apps/details?id=marcingrygierczyk.junglebang" target="_blank" class="thumbnail">
+                                <img src="images/MobileFourthGame.jpg" alt="Jungle Bang">
+
+                                <div class="mask">
+                                    <h2 class="topHeader">Jungle Bang</h2>
+
+                                    <h2 class="bottomHeader">Construct 2</h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="view">
+                            <a href="https://play.google.com/store/apps/details?id=com.grygier.tsge" target="_blank" class="thumbnail">
+                                <img src="images/MobileFifthGame.jpg" alt="The Simplest Game Ever">
+
+                                <div class="mask">
+                                    <h2 class="topHeader">The Simplest Game Ever</h2>
+
+                                    <h2 class="bottomHeader">Unity 3D</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="view">
+                            <a href="https://play.google.com/store/apps/details?id=com.grygier.quickshot" target="_blank" class="thumbnail">
+                                <img src="images/MobileSixthGame.jpg" alt="Quick Shot">
+
+                                <div class="mask">
+                                    <h2 class="topHeader">Quick Shot</h2>
+
+                                    <h2 class="bottomHeader">Unity 3D</h2>
+                                </div>
+                            </a>
+                        </div>
+                </div>
+
                 </div>
             </div><!-- /.row -->
         </div><!-- /.mobile-games -->
@@ -193,23 +300,23 @@
                 </div>
             </div><!-- /.row -->
             <div class="text-center contact-info">
-                <a href="mailto:kwaska1000@gmail.com" class="btn btn-default btn-contact">
+                <a id="a" href="mailto:kwaska1000@gmail.com" class="btn btn-default btn-contact">
                     kwaska1000@gmail.com<br /><i class="fa fa-envelope-square fa-lg"></i>
                 </a>
             </div>
         </div><!-- /.container-fluid-->
     </section>
 
-    <footer>
+    <footer class="disable-select">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-sm-push-3">
-                        <ul class="text-center">
-                            <li><a href="#banner">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
+                    <ul class="text-center navScroll">
+                        <li class="showbox"><a href="#home">Home</a></li>
+                        <li class="showbox"><a href="#about">About</a></li>
+                        <li class="showbox"><a href="#portfolio">Portfolio</a></li>
+                        <li class="showbox"><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-sm-push-2 col-md-3 col-md-push-3">
                     <p class="text-center text-muted copyright">Copyright &copy; Marcin Grygierczyk 2016.</p>
@@ -218,12 +325,14 @@
         </div>
     </footer>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBz6ZYcoZS-GclWGlBM0NagASkqGNCvRw&callback=initMap" async defer></script>
-    <script src="js/gmaps.js"></script>
     <script src="js/script.js"></script>
 
 </body>

@@ -1,11 +1,62 @@
 $(document).ready(function () {
+
+    width = $('.mask').width();
+    $('.mask').height(width / 2);
+    $('.view h2').css('padding', $('.mask').height() / 15).css('font-size', $('.mask').height() / 15);
+
     initMap();
     detectBrowser();
 });
 
-var map;
+//Set height of hover mask
+$(window).resize(function () {
+    width = $('.mask').width();
+    $('.mask').height(width / 2);   
+});
+
+//Set font and padding of hover headers after resizing 
+function resizedw() {
+    $('.view h2').css('padding', $('.mask').height() / 15).css('font-size', $('.mask').height() / 15);
+}
+
+var doit;
+window.onresize = function () {
+    clearTimeout(doit);
+    doit = setTimeout(resizedw, 300);
+};
+//Set font and padding of hover headers after resizing END
+
+//Scrolling
+$("ul.navScroll li a").click(function (e) {
+
+    clickedElement = $(this);
+    e.preventDefault();
+    
+    minimumScrollSpeed = 600;
+    maximumScrollSpeed = 1600;
+    scrollSpeed = (Math.abs($(window).scrollTop() - $(clickedElement.attr('href')).offset().top) - 200) < minimumScrollSpeed ? minimumScrollSpeed :
+        ((Math.abs($(window).scrollTop() - $(clickedElement.attr('href')).offset().top) - 200) > maximumScrollSpeed) ? maximumScrollSpeed :
+        (Math.abs($(window).scrollTop() - $(clickedElement.attr('href')).offset().top) - 200);
+    
+
+    $('html, body').animate({
+        scrollTop: $(clickedElement.attr('href')).offset().top - 45
+    }, scrollSpeed);
+});
+
+$(function () {
+    $("ul.navScroll li").click(function () {
+        $("ul.navScroll li").removeClass("active");
+        $(this).addClass("active");
+    });
+});
+//Scrolling END
+
+
 function initMap() {
-    myLatLng = { lat: 50.085277, lng: 19.140868 };
+
+    var map;
+    var myLatLng = { lat: 50.085277, lng: 19.140868 };
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: myLatLng,
@@ -24,16 +75,3 @@ function initMap() {
         title: 'Bierun, Skalna 7'
     });
 }
-
-//function detectBrowser() {
-//    var useragent = navigator.userAgent;
-//    var mapdiv = document.getElementById("map");
-
-//    if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1) {
-//        mapdiv.style.width = '100%';
-//        mapdiv.style.height = '100%';
-//    } else {
-//        mapdiv.style.width = '600px';
-//        mapdiv.style.height = '800px';
-//    }
-//}
