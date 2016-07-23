@@ -4,6 +4,12 @@ $(document).ready(function () {
     $('.mask').height(width / 2);
     $('.view h2').css('padding', $('.mask').height() / 15).css('font-size', $('.mask').height() / 15);
 
+    $('.view .mask .kongregateImg').css('height', $('.mask').height() / 5).css('top', $('.mask').height() / 2 - $('.view .mask .kongregateImg').height() / 2);
+    $('.view .mask .kongregateImg').css('left', $('.mask').width() / 2 - $('.view .mask .kongregateImg').width() / 2);
+
+    $('.view .mask .googlePlayImg').css('height', $('.mask').height() / 5).css('top', $('.mask').height() / 2 - $('.view .mask .googlePlayImg').height() / 2);
+    $('.view .mask .googlePlayImg').css('left', $('.mask').width() / 2 - $('.view .mask .googlePlayImg').width() / 2);
+
     initMap();
     detectBrowser();
 });
@@ -11,18 +17,28 @@ $(document).ready(function () {
 //Set height of hover mask
 $(window).resize(function () {
     width = $('.mask').width();
-    $('.mask').height(width / 2);   
+    $('.mask').height(width / 2);
 });
 
 //Set font and padding of hover headers after resizing 
 function resizedw() {
+    
     $('.view h2').css('padding', $('.mask').height() / 15).css('font-size', $('.mask').height() / 15);
+   
+    $('.view .mask .kongregateImg').css('height', $('.mask').height() / 5).css('top', $('.mask').height() / 2 - $('.view .mask .kongregateImg').height() / 2);
+    $('.view .mask .kongregateImg').css('left', $('.mask').width() / 2 - $('.view .mask .kongregateImg').width() / 2);
+
+    $('.view .mask .googlePlayImg').css('height', $('.mask').height() / 5).css('top', $('.mask').height() / 2 - $('.view .mask .googlePlayImg').height() / 2);
+    $('.view .mask .googlePlayImg').css('left', $('.mask').width() / 2 - $('.view .mask .googlePlayImg').width() / 2);
 }
 
 var doit;
 window.onresize = function () {
     clearTimeout(doit);
     doit = setTimeout(resizedw, 300);
+    doit = setTimeout(resizedw, 300);
+    doit = setTimeout(resizedw, 300);
+    doit = setTimeout(resizedw, 300);   
 };
 //Set font and padding of hover headers after resizing END
 

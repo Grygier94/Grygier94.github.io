@@ -118,6 +118,10 @@ h1 {
     padding-bottom: 2vw;
 }
 
+#getInTouch {
+    border-bottom: 1px solid #ddd;
+}
+
 #map {
     width: 100%;
     height: 500px;
@@ -130,6 +134,11 @@ h1 {
 .btn-contact {
     margin: 1em;
     font-size: calc(1em + 1vw);
+}
+
+.btn-contact:hover {
+    color: #fff;
+    background-color: #dd4b39;
 }
 
 /* footer */
@@ -211,6 +220,10 @@ footer {
         overflow: hidden;
         top: 0;
         left: 0;
+    }
+
+    .view .mask img {
+        position: absolute;
     }
 
     .view h2 {
