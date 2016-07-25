@@ -4,6 +4,7 @@ $(document).ready(function () {
     mask = $('.mask');
     kongregateImg = $('.view .mask .kongregateImg');
     googlePlayImg = $('.view .mask .googlePlayImg');
+    githubImg = $('.view .mask .githubImg');
 
     setMaskHeight();
     centerAndResizeMaskContent();
@@ -35,6 +36,10 @@ function centerAndResizeMaskContent() {
     googlePlayImg.css('height', mask.height() / 5)
         .css('top', mask.height() / 2 - googlePlayImg.height() / 2)
         .css('left', mask.width() / 2 - googlePlayImg.width() / 2);
+
+    githubImg.css('height', mask.height() / 4)
+        .css('top', mask.height() / 2 - githubImg.height() / 2)
+        .css('left', mask.width() / 2 - githubImg.width() / 2);
 }
 
 var doit;
@@ -45,8 +50,18 @@ window.onresize = function () {
 //Set font and padding of hover headers after resizing END
 
 //Scrolling
-$("ul.navScroll li a").click(function (e) {
+$("ul.navScroll li a").click(scrollTo);
+//Brand click
+$('.navbar-brand').click(scrollTo);
 
+$(function () {
+    $("ul.navScroll li").click(function () {
+        $("ul.navScroll li").removeClass("active");
+        $(this).addClass("active");
+    });
+});
+
+function scrollTo(e) {
     clickedElement = $(this);
     e.preventDefault();
 
@@ -60,14 +75,7 @@ $("ul.navScroll li a").click(function (e) {
     $('html, body').animate({
         scrollTop: $(clickedElement.attr('href')).offset().top - 45
     }, scrollSpeed);
-});
-
-$(function () {
-    $("ul.navScroll li").click(function () {
-        $("ul.navScroll li").removeClass("active");
-        $(this).addClass("active");
-    });
-});
+}
 //Scrolling END
 
 

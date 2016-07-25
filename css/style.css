@@ -209,7 +209,6 @@ footer {
 
     .view .mask {
         opacity: 0;
-        /*background-color: rgba(219,127,8, 0.7);*/
         background-color: rgba(255,255,255, 0.4);
         transition: all 0.4s ease-in-out;
     }
